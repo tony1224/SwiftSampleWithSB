@@ -8,14 +8,19 @@
 
 import Foundation
 
-extension NSObject {
-    
-    class var className: String {
+public protocol ClassNameProtocol {
+    static var className: String { get }
+    var className: String { get }
+}
+
+public extension ClassNameProtocol {
+    public static var className: String {
         return String(describing: self)
     }
     
-    var className: String {
+    public var className: String {
         return type(of: self).className
     }
-
 }
+
+extension NSObject: ClassNameProtocol {}

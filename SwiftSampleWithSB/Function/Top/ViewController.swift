@@ -8,6 +8,14 @@
 
 import UIKit
 
+// TODO: Utilityフォルダの内容をEmbbed FrameworkとかOSSにして
+//       外部のプロジェクトにすぐに当て込んで使えるようにしたい(爆速化)
+// TODO: このenumから要素数, 文言をtableメソッドで返せるような仕組み
+//       switchでdefaultは使いたくない
+//    private enum ItemName: String {
+//        case apiConnection = "API Connection"
+//    }
+
 class ViewController: UIViewController {
     
     // IBOutlet
@@ -15,18 +23,15 @@ class ViewController: UIViewController {
     
     // Private
     private var itemList: [String] = []
-    // TODO: このenumから要素数, 文言をtableメソッドで返せるような仕組み
-    //       switchでdefaultは使いたくない
-//    private enum ItemName: String {
-//        case apiConnection = "API Connection"
-//    }
+    
+    // MARK: - LifeCycle Method
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationBar(title: "SwiftSample")
+        self.setupNavigationBar(title: "Swift Sample")
         self.tableView.setup()
 
-        self.itemList = ["API Connection"]
+        self.itemList = ["API通信(Codable)", "API通信(SwiftyJSON)"]
     }
 
     override func didReceiveMemoryWarning() {

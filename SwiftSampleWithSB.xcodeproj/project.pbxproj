@@ -19,6 +19,7 @@
 		536C15132062581000790DF6 /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536C15122062581000790DF6 /* TopCell.swift */; };
 		536C151620625D0800790DF6 /* APIConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536C151520625D0800790DF6 /* APIConnectViewController.swift */; };
 		536C151820625D5900790DF6 /* APIConnect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536C151720625D5900790DF6 /* APIConnect.storyboard */; };
+		536C151A206262A500790DF6 /* nicoca_v1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 536C1519206262A500790DF6 /* nicoca_v1.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		536C15122062581000790DF6 /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
 		536C151520625D0800790DF6 /* APIConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnectViewController.swift; sourceTree = "<group>"; };
 		536C151720625D5900790DF6 /* APIConnect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APIConnect.storyboard; sourceTree = "<group>"; };
+		536C1519206262A500790DF6 /* nicoca_v1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nicoca_v1.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,8 @@
 		536C15042062509400790DF6 /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				536C151420625CAD00790DF6 /* APIConnect */,
 				536C1511206257FA00790DF6 /* Top */,
+				536C151420625CAD00790DF6 /* APIConnect */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -88,6 +90,7 @@
 		536C1505206250AF00790DF6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				536C1519206262A500790DF6 /* nicoca_v1.ttf */,
 				536C14FE20624E3B00790DF6 /* Info.plist */,
 				536C14FB20624E3B00790DF6 /* LaunchScreen.storyboard */,
 				536C14F920624E3B00790DF6 /* Assets.xcassets */,
@@ -127,10 +130,34 @@
 		536C151420625CAD00790DF6 /* APIConnect */ = {
 			isa = PBXGroup;
 			children = (
-				536C151520625D0800790DF6 /* APIConnectViewController.swift */,
-				536C151720625D5900790DF6 /* APIConnect.storyboard */,
+				536C151B2062687600790DF6 /* Model */,
+				536C151C2062687D00790DF6 /* View */,
+				536C151D2062688600790DF6 /* Controller */,
 			);
 			path = APIConnect;
+			sourceTree = "<group>";
+		};
+		536C151B2062687600790DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		536C151C2062687D00790DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				536C151720625D5900790DF6 /* APIConnect.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		536C151D2062688600790DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				536C151520625D0800790DF6 /* APIConnectViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +221,7 @@
 			files = (
 				536C151820625D5900790DF6 /* APIConnect.storyboard in Resources */,
 				536C14FD20624E3B00790DF6 /* LaunchScreen.storyboard in Resources */,
+				536C151A206262A500790DF6 /* nicoca_v1.ttf in Resources */,
 				536C14FA20624E3B00790DF6 /* Assets.xcassets in Resources */,
 				536C14F820624E3B00790DF6 /* Main.storyboard in Resources */,
 			);

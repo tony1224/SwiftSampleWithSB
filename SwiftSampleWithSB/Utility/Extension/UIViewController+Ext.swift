@@ -13,7 +13,10 @@ extension UIViewController: StoryboardInstantiatable {
     // ナビゲーションバー設定
     func setupNavigationBar(title: String) {
         self.title = title
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedStringKey.foregroundColor: UIColor.white,
+             NSAttributedStringKey.font: UIFont(name: "Nicoca", size: 23)!]
         self.navigationController?.navigationBar.barTintColor = ColorUtil.navigationBarColor
     }
 
