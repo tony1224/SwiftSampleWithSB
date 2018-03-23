@@ -1,7 +1,94 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Connect View Controller-->
+        <scene sceneID="yg7-mX-AG3">
+            <objects>
+                <viewController storyboardIdentifier="APIConnectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FMH-u2-cNr" customClass="APIConnectViewController" customModule="SwiftSampleWithSB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cq-U4-Ceu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SmG-3P-LCf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="b2A-RG-Dha">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b2A-RG-Dha" id="mwn-3p-zHB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FMH-u2-cNr" id="EK8-By-BKo"/>
+                                    <outlet property="delegate" destination="FMH-u2-cNr" id="5jv-Qf-kfS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SmG-3P-LCf" firstAttribute="trailing" secondItem="5Nl-fi-ACf" secondAttribute="trailing" id="NSa-a3-TqG"/>
+                            <constraint firstItem="SmG-3P-LCf" firstAttribute="bottom" secondItem="5Nl-fi-ACf" secondAttribute="bottom" id="b1f-5t-dgF"/>
+                            <constraint firstItem="SmG-3P-LCf" firstAttribute="leading" secondItem="5Nl-fi-ACf" secondAttribute="leading" id="lfx-IF-E9r"/>
+                            <constraint firstItem="SmG-3P-LCf" firstAttribute="top" secondItem="9cq-U4-Ceu" secondAttribute="top" id="qvC-kM-yZx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Nl-fi-ACf"/>
+                    </view>
+                    <connections>
+                        <outlet property="pullToRefreshView" destination="CQb-6G-N06" id="87x-rW-4Ja"/>
+                        <outlet property="tableView" destination="SmG-3P-LCf" id="AwY-ab-1ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsn-yt-dgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="CQb-6G-N06" customClass="PullToRefreshView" customModule="SwiftSampleWithSB" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="引っ張ってー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXc-3D-CkY">
+                            <rect key="frame" x="135.5" y="12" width="104" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wheel" translatesAutoresizingMaskIntoConstraints="NO" id="sMj-LS-hGd">
+                            <rect key="frame" x="97" y="7" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="0ri-Q3-7D0"/>
+                                <constraint firstAttribute="width" secondItem="sMj-LS-hGd" secondAttribute="height" multiplier="1:1" id="AQT-uF-msO"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="JXc-3D-CkY" firstAttribute="centerX" secondItem="CQb-6G-N06" secondAttribute="centerX" id="YZh-3F-JlW"/>
+                        <constraint firstItem="JXc-3D-CkY" firstAttribute="centerY" secondItem="sMj-LS-hGd" secondAttribute="centerY" id="gCh-9s-UMZ"/>
+                        <constraint firstItem="JXc-3D-CkY" firstAttribute="centerY" secondItem="CQb-6G-N06" secondAttribute="centerY" id="scK-ia-9et"/>
+                        <constraint firstItem="JXc-3D-CkY" firstAttribute="leading" secondItem="sMj-LS-hGd" secondAttribute="trailing" constant="8" id="utm-wc-AmC"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="O5A-WQ-XsD"/>
+                    <connections>
+                        <outlet property="refreshImageView" destination="sMj-LS-hGd" id="fVt-Cg-1FI"/>
+                        <outlet property="refreshLabel" destination="JXc-3D-CkY" id="4Av-Xe-Kli"/>
+                    </connections>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="43.628185907046479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Wheel" width="32" height="32"/>
+    </resources>
 </document>

@@ -16,6 +16,7 @@ import UIKit
 //        case apiConnection = "API Connection"
 //    }
 
+// 初回サンプル選択画面のViewControllerです。
 class ViewController: UIViewController {
     
     // IBOutlet
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
         self.setupNavigationBar(title: "Swift Sample")
         self.tableView.setup()
 
-        self.itemList = ["API通信(Codable)", "API通信(SwiftyJSON)"]
+        self.itemList = ["API通信(Codable)"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +48,7 @@ extension ViewController: UITableViewDelegate {
         case 0:
             // API通信サンプル画面
             let vc = APIConnectViewController.instantiate(withStoryboard: "APIConnect")
+            vc.isCodable = true
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break

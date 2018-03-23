@@ -20,6 +20,7 @@
 		536C151620625D0800790DF6 /* APIConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536C151520625D0800790DF6 /* APIConnectViewController.swift */; };
 		536C151820625D5900790DF6 /* APIConnect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536C151720625D5900790DF6 /* APIConnect.storyboard */; };
 		536C151A206262A500790DF6 /* nicoca_v1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 536C1519206262A500790DF6 /* nicoca_v1.ttf */; };
+		536C15612065659300790DF6 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536C15602065659300790DF6 /* PullToRefreshView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		536C151520625D0800790DF6 /* APIConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnectViewController.swift; sourceTree = "<group>"; };
 		536C151720625D5900790DF6 /* APIConnect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APIConnect.storyboard; sourceTree = "<group>"; };
 		536C1519206262A500790DF6 /* nicoca_v1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nicoca_v1.ttf; sourceTree = "<group>"; };
+		536C15602065659300790DF6 /* PullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		536C1506206250DF00790DF6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				536C15602065659300790DF6 /* PullToRefreshView.swift */,
 				536C15082062510100790DF6 /* ColorUtil.swift */,
 				536C150E2062569B00790DF6 /* Extension */,
 			);
@@ -239,6 +242,7 @@
 				536C150D2062569600790DF6 /* UITableView+Ext.swift in Sources */,
 				536C150B2062510F00790DF6 /* UIViewController+Ext.swift in Sources */,
 				536C151620625D0800790DF6 /* APIConnectViewController.swift in Sources */,
+				536C15612065659300790DF6 /* PullToRefreshView.swift in Sources */,
 				536C14F320624E3B00790DF6 /* AppDelegate.swift in Sources */,
 				536C15132062581000790DF6 /* TopCell.swift in Sources */,
 				536C15102062576B00790DF6 /* NSObject+Ext.swift in Sources */,
