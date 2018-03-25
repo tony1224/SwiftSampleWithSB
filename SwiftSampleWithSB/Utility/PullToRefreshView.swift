@@ -18,15 +18,19 @@ class PullToRefreshView: UIView {
         self.refreshLabel.text = text
     }
     
-    // 画像のアニメーション処理です。
-    func animateImage() {
-        let layer = self.refreshImageView.layer
-        let animation = CABasicAnimation(keyPath: "rotation")
+    // 画像のアニメーション開始処理です。
+    func startRotation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.fromValue = 0.0
         animation.toValue = Double.pi / 2.0
         animation.duration = 0.25
-        animation.repeatCount = MAXFLOAT
-        animation.isCumulative = true
-        layer.add(animation, forKey: "ImageRotation")
+        animation.repeatCount = Float.infinity
+        self.refreshImageView.layer.add(animation, forKey: "kRotationAnimationKey")
+    }
+    
+    // 画像のアニメーション停止処理です。
+    func stopRotation() {
+        self.refreshImageView.layer.removeAnimation(forKey: "kRotationAnimationKey")
     }
     
 }

@@ -56,7 +56,7 @@ class APIConnectViewController: UIViewController {
         self.doSomething()
         
         // 通信中に画像をアニメーション処理する
-        self.pullToRefreshView.animateImage()
+        self.pullToRefreshView.startRotation()
     }
     
     // TODO: 実際に通信するまでの暫定メソッド
@@ -70,6 +70,8 @@ class APIConnectViewController: UIViewController {
     
     @objc func timeUpdate() {
         self.refreshControl.endRefreshing()
+        self.pullToRefreshView.stopRotation()
+        self.pullToRefreshView.changeLabel(text: "引っ張ってー")
         self.timer = nil
     }
     
